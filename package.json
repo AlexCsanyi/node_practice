@@ -1,0 +1,22 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "npm package manager exercise",
+  "main": "npm.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexCsanyi/node_practice.git"
+  },
+  "author": "Alex Csanyi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlexCsanyi/node_practice/issues"
+  },
+  "homepage": "https://github.com/AlexCsanyi/node_practice#readme",
+  "dependencies": {
+    "lodash": "^4.17.15"
+  }
+}
