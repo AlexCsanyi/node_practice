@@ -8,17 +8,36 @@
   </head>
   <body>
     <div class="container">
-      <form action="/" method="POST">
+      <form action="/" method="POST" id="form">
         <div class="form-group">
           <label for="email">Email</label><br />
           <input id="email" name="email" type="text" placeholder="email" />
         </div>
         <div class="form-group">
           <label for="pass">Password</label><br />
-          <input id="pass" name="pass" type="text" placeholder="password" />
+          <input id="pass" name="pass" type="password" placeholder="password" />
         </div>
         <button type="submit">Sumbit</button>
       </form>
     </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(() => {
+        $("#form").submit(e => {
+          e.preventDefault();
+          $.ajax({
+            url: "/",
+            type: "post",
+            contentType: "application/json",
+            data: JSON.stringify($("#form").serializeArray()),
+            success: response => {
+              console.log("successfully got response");
+              console.log(response);
+            }
+          });
+        });
+      });
+    </script>
   </body>
 </html>
