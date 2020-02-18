@@ -7,6 +7,7 @@ app.get("/", (req, res) => {
 });
 
 // examples
+
 // app.get("/example", (req, res) => {
 //   res.send("you reached the example route");
 // });
